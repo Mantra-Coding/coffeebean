@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/ordersFragment"
+        android:title="@string/menu_item"/>
+
+    <item
+        android:id="@+id/mantra_item"
+        android:title="@string/mantra_item_text"/>
+
+</menu>

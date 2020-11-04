@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.coffeebean.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_registerFragment2"
+            app:destination="@id/registerFragment2"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/fragment_fade_exit"
+            app:popUpTo="@id/homeFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_introFragment"
+            app:destination="@id/introFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@android:anim/fade_out"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/coffeeFragment2"
+        android:name="com.example.coffeebean.coffee.CoffeeFragment"
+        android:label="fragment_coffee"
+        tools:layout="@layout/fragment_coffee" >
+        <argument
+            android:name="userId"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_coffeeFragment2_to_successCoffeeFragment"
+            app:destination="@id/successCoffeeFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@android:anim/fade_out"
+            app:popUpTo="@id/coffeeFragment2"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment2"
+        android:name="com.example.coffeebean.register.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment2_to_successFragment"
+            app:destination="@id/successFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@android:anim/fade_out"
+            app:popUpTo="@id/registerFragment2"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/successFragment"
+        android:name="com.example.coffeebean.register.success.SuccessFragment"
+        android:label="fragment_success"
+        tools:layout="@layout/fragment_success" >
+        <argument
+            android:name="username"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/successCoffeeFragment"
+        android:name="com.example.coffeebean.coffee.success.SuccessCoffeeFragment"
+        android:label="fragment_success_coffee"
+        tools:layout="@layout/fragment_success_coffee" >
+        <argument
+            android:name="userId"
+            app:argType="long" />
+        <argument
+            android:name="productsNumber"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/ordersFragment"
+        android:name="com.example.coffeebean.orders.OrdersFragment"
+        android:label="OrdersFragment" >
+        <argument
+            android:name="userId"
+            app:argType="long" />
+    </fragment>
+    <fragment
+        android:id="@+id/mantraFragment"
+        android:name="com.example.coffeebean.coffee.mantra.MantraFragment"
+        android:label="fragment_mantra"
+        tools:layout="@layout/fragment_mantra" />
+    <fragment
+        android:id="@+id/introFragment"
+        android:name="com.example.coffeebean.intro.IntroFragment"
+        android:label="fragment_intro"
+        tools:layout="@layout/fragment_intro" >
+        <action
+            android:id="@+id/action_introFragment_to_coffeeFragment2"
+            app:destination="@id/coffeeFragment2"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@android:anim/fade_out"
+            app:popUpTo="@id/introFragment" />
+        <argument
+            android:name="userId"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_introFragment_to_mantraFragment"
+            app:destination="@id/mantraFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@android:anim/fade_out"
+            app:popUpTo="@id/introFragment" />
+        <action
+            android:id="@+id/action_introFragment_to_ordersFragment"
+            app:destination="@id/ordersFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@android:anim/fade_out"
+            app:popUpTo="@id/introFragment" />
+    </fragment>
+</navigation>
