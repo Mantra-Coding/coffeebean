@@ -15,7 +15,7 @@
     <a href="https://github.com/Mantra-Coding/coffeebean/pull">Pull Request</a><br />
     <img alt="GitHub issues" src="https://img.shields.io/github/issues/Mantra-Coding/coffeebean">
     <img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/Mantra-Coding/coffeebean">
-    <img alt="GitHub" src="https://img.shields.io/github/license/Mantra-Coding/coffeebean">
+    <img alt="GitHub" src="https://img.shields.io/github/license/Mantra-Coding/coffeebean?1">
     <img alt="version" src="https://img.shields.io/badge/version-1.0.0-%23ff6e40">
   </p>
 </p>
